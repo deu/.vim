@@ -1,16 +1,17 @@
 " === General settings
-set nocompatible           " Disable VI compatibility.
-set number                 " Line numbers.
-set cursorline             " Highlight the current line.
-"set colorcolumn=80         " Line length marker.
-set laststatus=2           " Always show the statusline.
-set hidden                 " Don't unload abandoned buffers.
-set wildmenu               " Turn on the wildmenu...
-set wildmode=longest:full  " ...and make it behave like BASH.
-set completeopt-=preview   " Disable the autocompletion's preview window.
-set noswapfile             " Disable the creation of .swp files.
-syntax on                  " Syntax hightlighting.
-filetype plugin indent on  " Filetype plugins.
+set nocompatible                " Disable VI compatibility.
+set backspace=indent,eol,start  " Backspace behaves as it should.
+set number                      " Line numbers.
+set cursorline                  " Highlight the current line.
+"set colorcolumn=80              " Line length marker.
+set laststatus=2                " Always show the statusline.
+set hidden                      " Don't unload abandoned buffers.
+set wildmenu                    " Turn on the wildmenu...
+set wildmode=longest:full       " ...and make it behave like BASH.
+set completeopt-=preview        " Disable the autocompletion's preview window.
+set noswapfile                  " Disable the creation of .swp files.
+syntax on                       " Syntax hightlighting.
+filetype plugin indent on       " Filetype plugins.
 
 " === Indentation
 set expandtab      " <TAB> inserts whitespaces.
