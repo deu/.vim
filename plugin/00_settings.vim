@@ -1,4 +1,5 @@
 " === General settings
+set nocompatible           " Disable VI compatibility.
 set number                 " Line numbers.
 set cursorline             " Highlight the current line.
 "set colorcolumn=80         " Line length marker.
@@ -32,7 +33,7 @@ set smartcase   " ...but don't do that when the search starts in upper case.
 if &t_Co == 256 || has("gui_running")
     colorscheme xoria256mod
     " Display tabs:
-    set list listchars=tab:►―
+    "set list listchars=tab:►―
 else
     colorscheme strange
 endif
