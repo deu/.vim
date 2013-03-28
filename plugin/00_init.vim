@@ -1,3 +1,6 @@
+" Disable VI compatibility.
+set nocompatible
+
 " Define a pattern for detecting trailing whitespaces:
 highlight ExtraWS ctermbg=red ctermfg=white
 match ExtraWS /\s\+$/
