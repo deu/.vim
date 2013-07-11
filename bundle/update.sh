@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUNDLES='~/.vim/bundle/'
+BUNDLES="$HOME/.vim/bundle/"
 cd $BUNDLES
 
 for plugin in $(ls -d */)

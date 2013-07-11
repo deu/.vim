@@ -16,6 +16,7 @@
 [submodule "bundle/YankRing.vim"]
 	path = bundle/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
+	ignore = dirty
 [submodule "bundle/vim-indentblank"]
 	path = bundle/vim-indentblank
 	url = https://github.com/deuiore/vim-indentblank.git
@@ -25,3 +26,6 @@
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = https://github.com/evidens/vim-twig.git
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git

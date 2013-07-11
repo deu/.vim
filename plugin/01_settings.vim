@@ -20,10 +20,10 @@ set tabstop=4      " How long an actual tab is.
 set shiftwidth=4   " Length of every indentation step.
 set softtabstop=4  " Number of whitespaces VIM sees as a tab.
 set autoindent     " Automatic indentation (duh).
-" Use actual tabs when editing HTML and Makefiles:
-autocmd FileType html,make setlocal noexpandtab
+" Use actual tabs when editing certain filetypes:
+autocmd FileType go,html,make setlocal noexpandtab
 " Remove trailing whitespaces when saving certain filetypes:
-autocmd FileType c,cpp,python,perl,php,html,css autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,css,go,html,perl,php,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " === Search
 set hlsearch    " Highlight search results.
