@@ -1,21 +1,14 @@
 " Disable VI compatibility.
 set nocompatible
 
-" Define a pattern for detecting trailing whitespaces:
-highlight ExtraWS ctermbg=red ctermfg=white
-match ExtraWS /\s\+$/
-autocmd BufWinEnter * match ExtraWS /\s\+$/
-autocmd InsertEnter * match ExtraWS /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWS /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
-" Register a function to update the plugins:
-function! UpdateBundles()
-    !~/.vim/bundle/update.sh
+" Function to source configuration files' directories:
+function! SourceDir(dir)
+    for l:path in split(globpath(a:dir, '*.vim'), "\n")
+        execute 'source' fnameescape(l:path)
+    endfor
 endfunction
-command! UpdateBundles call UpdateBundles()
 
-" Load the plugins (the function is based on sunaku/vim-unbundle):
+" Function to load the plugins (based on sunaku/vim-unbundle):
 function! SourceBundles()
     " Register new bundles:
     let l:existing = {} | for l:path in split(&runtimepath, ',') | let l:existing[l:path] = 1 | endfor
@@ -33,4 +26,11 @@ function! SourceBundles()
         execute 'source' fnameescape(l:plugin)
     endfor
 endfunction
+
+" Load configuration files:
+call SourceDir('~/.vim/config')
+" Load plugins:
 call SourceBundles()
+" Load essential configuration files:
+execute 'source ~/.vim/vimrc.vim'
+execute 'source ~/.vim/keymaps.vim'

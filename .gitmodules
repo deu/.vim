@@ -1,18 +1,6 @@
-[submodule "bundle/buftabs"]
-	path = bundle/buftabs
-	url = https://github.com/vim-scripts/buftabs.git
-[submodule "bundle/neocomplcache"]
-	path = bundle/neocomplcache
-	url = https://github.com/Shougo/neocomplcache.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/strange.vim"]
 	path = bundle/strange.vim
 	url = https://github.com/strange/strange.vim.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "bundle/YankRing.vim"]
 	path = bundle/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
@@ -20,12 +8,27 @@
 [submodule "bundle/vim-indentblank"]
 	path = bundle/vim-indentblank
 	url = https://github.com/deuiore/vim-indentblank.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-xoria256mod"]
+	path = bundle/vim-xoria256mod
+	url = https://github.com/deuiore/vim-xoria256mod.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/neocomplcache.vim"]
+	path = bundle/neocomplcache.vim
+	url = https://github.com/Shougo/neocomplcache.vim.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/html5.vim"]
 	path = bundle/html5.vim
 	url = https://github.com/othree/html5.vim.git
-[submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = https://github.com/evidens/vim-twig.git
-[submodule "bundle/vim-golang"]
-	path = bundle/vim-golang
-	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/vim-hlextraws"]
+	path = bundle/vim-hlextraws
+	url = https://github.com/deuiore/vim-hlextraws.git
