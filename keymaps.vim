@@ -4,4 +4,4 @@ nnoremap <ESC> :noh<ESC>
 noremap <C-H> :bprev<CR>
 noremap <C-L> :bnext<CR>
 " Easily toggle the YankRing:
-nnoremap <F2> :YRShow<CR>
+nnoremap \\ :YRShow<CR>
