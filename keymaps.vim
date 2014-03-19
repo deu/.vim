@@ -1,7 +1,9 @@
-" <ESC> in normal mode clears highlights:
-nnoremap <ESC> :noh<ESC>
+" \<ESC> in normal mode clears highlights:
+nnoremap \<ESC> :noh<CR>
 " Switch between buffers:
 noremap <C-H> :bprev<CR>
 noremap <C-L> :bnext<CR>
 " Easily toggle the YankRing:
-nnoremap \\ :YRShow<CR>
+nnoremap \y :YRShow<CR>
+" Easily toggle gitgutter:
+nnoremap \+ :GitGutterToggle<CR>

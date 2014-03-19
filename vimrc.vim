@@ -11,7 +11,6 @@ set wildmenu                    " Turn on the wildmenu...
 set wildmode=longest:full       " ...and make it behave like BASH.
 set completeopt-=preview        " Disable the autocompletion's preview window.
 set noswapfile                  " Disable the creation of .swp files.
-set mouse=a                     " Enable the mouse.
 syntax on                       " Syntax hightlighting.
 filetype plugin indent on       " Filetype plugins.
 
