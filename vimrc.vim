@@ -5,7 +5,7 @@ set cursorline                  " Highlight the current line.
 set colorcolumn=80              " Line length marker.
 set laststatus=2                " Always show the statusline.
 set scrolloff=5                 " Cursor's page padding.
-set ttimeoutlen=1               " Escape sequence timeout (no 1s wait).
+set ttimeoutlen=0               " Escape sequence timeout (no 1s wait).
 set hidden                      " Don't unload abandoned buffers.
 set wildmenu                    " Turn on the wildmenu...
 set wildmode=longest:full       " ...and make it behave like BASH.
@@ -40,8 +40,13 @@ else
     colorscheme strange
 endif
 " Change the cursor when in insert mode in some compatible terminal emulators:
-let &t_SI = "\<ESC>]50;CursorShape=1\x7"
-let &t_EI = "\<ESC>]50;CursorShape=0\x7"
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
 " GUI-specific options:
 if has("gui_running")
     set lines=50 columns=90  " Set the window size.
