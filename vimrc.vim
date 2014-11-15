@@ -50,7 +50,7 @@ endif
 " GUI-specific options:
 if has("gui_running")
     set lines=50 columns=90  " Set the window size.
-    set guifont="Envy Code R 10"
+    set guifont=Envy\ Code\ R\ 10
     " Disable the cursor blinking when not in insert mode:
     let &guicursor = substitute(&guicursor, 'n-v-c:', '&blinkon0-', '')
     " Remove the menu bar and the toolbar:
