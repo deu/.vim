@@ -9,6 +9,8 @@ noremap ùy "+y
 noremap ùp "+p
 noremap ùùd "+dd
 noremap ùùy "+yy
+noremap <C-S-c> "+y
+inoremap <C-S-p> <ESC>"+pa
 " Toggle the YankRing:
 nnoremap \y :YRShow<CR>
 " Toggle gitgutter:

@@ -34,3 +34,4 @@ call SourceBundles()
 " Load essential configuration files:
 execute 'source ~/.vim/vimrc.vim'
 execute 'source ~/.vim/keymaps.vim'
+execute 'source ~/.vim/functions.vim'
