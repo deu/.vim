@@ -11,3 +11,7 @@ noremap <C-S-p> <ESC>"+pa
 nnoremap \y :YRShow<CR>
 " Toggle gitgutter:
 nnoremap \+ :GitGutterToggle<CR>
+" Toggle undotree
+nnoremap \u :UndotreeToggle<CR>
+" Toggle CtrlP
+nnoremap <C-@> :CtrlPMixed<CR>

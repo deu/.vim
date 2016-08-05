@@ -13,6 +13,11 @@ set completeopt-=preview        " Disable the autocompletion's preview window.
 set noswapfile                  " Disable the creation of .swp files.
 syntax on                       " Syntax hightlighting.
 filetype plugin indent on       " Filetype plugins.
+" Enable mouse support:
+set mouse=a
+set ttymouse=xterm2
+
+let &viminfo .= expand(',n' . g:dotvim . '/store/viminfo')
 
 " === Indentation
 set expandtab      " <TAB> inserts whitespaces.
@@ -31,6 +36,15 @@ set hlsearch    " Highlight search results.
 set ignorecase  " Ignore case...
 set smartcase   " ...but don't do that when the search starts in upper case.
 
+" === Persistent undo
+if has('persistent_undo')
+    let &undodir = expand(g:dotvim . '/store/undodir/')
+    if !isdirectory(&undodir)
+        call mkdir(&undodir, "", 0700)
+    endif
+    set undofile
+endif
+
 " === Aestetics
 if &t_Co == 256 || has("gui_running")
     colorscheme xoria256mod
@@ -48,7 +62,7 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 " GUI-specific options:
-if has("gui_running")
+if has('gui_running')
     set lines=50 columns=90  " Set the window size.
     set guifont=Envy\ Code\ R\ 10
     " Disable the cursor blinking when not in insert mode:

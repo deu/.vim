@@ -29,7 +29,7 @@ Add Submodule
 Remove Submodule
 ----------------
 ```
-~/.vim $ git submodule deinit bundle/<NAME>
+~/.vim $ git submodule deinit -f bundle/<NAME>
 ~/.vim $ git rm --cached bundle/<NAME>
 ~/.vim $ git config -f .gitmodules --remove-section submodule.bundle/<NAME>
 ~/.vim $ rm -rf bundle/<NAME> .git/modules/bundle/<NAME>

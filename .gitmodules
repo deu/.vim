@@ -39,3 +39,9 @@
 	path = bundle/vim-gitbranch
 	url = https://github.com/itchyny/vim-gitbranch.git
 	ignore = untracked
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim

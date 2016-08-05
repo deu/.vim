@@ -1,6 +1,9 @@
 " Disable VI compatibility.
 set nocompatible
 
+" Pointer to the user vim runtime path (e.g. ~/.vim):
+let g:dotvim = split(&runtimepath, ',')[0]
+
 " Function to source configuration files' directories:
 function! SourceDir(dir)
     for l:path in split(globpath(a:dir, '*.vim'), "\n")
@@ -27,11 +30,11 @@ function! SourceBundles()
     endfor
 endfunction
 
+" Load configuration files:
+call SourceDir(g:dotvim . '/config')
 " Load plugins:
 call SourceBundles()
-" Load configuration files:
-call SourceDir('~/.vim/config')
 " Load essential configuration files:
-execute 'source ~/.vim/vimrc.vim'
-execute 'source ~/.vim/keymaps.vim'
-execute 'source ~/.vim/functions.vim'
+execute 'source ' . g:dotvim . '/vimrc.vim'
+execute 'source ' . g:dotvim . '/keymaps.vim'
+execute 'source ' . g:dotvim . '/functions.vim'
