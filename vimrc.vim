@@ -16,7 +16,7 @@ filetype plugin indent on       " Filetype plugins.
 " Enable mouse support:
 set mouse=a
 set ttymouse=xterm2
-
+" Put the viminfo file into the store directory:
 let &viminfo .= expand(',n' . g:dotvim . '/store/viminfo')
 
 " === Indentation

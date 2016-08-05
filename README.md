@@ -6,7 +6,7 @@ My .vimrc-less VIM configuration.
 Clone
 -----
 ```
-$ git clone --recursive https://github.com/deuiore/.vim.git
+~ $ git clone --recursive https://github.com/deuiore/.vim.git
 ```
 
 Update
