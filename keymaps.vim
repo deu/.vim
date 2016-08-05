@@ -4,13 +4,9 @@ nnoremap \<ESC> :noh<CR>
 noremap <C-H> :bprev<CR>
 noremap <C-L> :bnext<CR>
 " Cut/copy/paste to/from the system's clipboard:
-noremap ùd "+d
-noremap ùy "+y
-noremap ùp "+p
-noremap ùùd "+dd
-noremap ùùy "+yy
-noremap <C-S-c> "+y
-inoremap <C-S-p> <ESC>"+pa
+noremap <C-S-d> "+d
+noremap <C-S-y> "+y
+noremap <C-S-p> <ESC>"+pa
 " Toggle the YankRing:
 nnoremap \y :YRShow<CR>
 " Toggle gitgutter:
