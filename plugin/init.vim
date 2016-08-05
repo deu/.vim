@@ -27,10 +27,10 @@ function! SourceBundles()
     endfor
 endfunction
 
-" Load configuration files:
-call SourceDir('~/.vim/config')
 " Load plugins:
 call SourceBundles()
+" Load configuration files:
+call SourceDir('~/.vim/config')
 " Load essential configuration files:
 execute 'source ~/.vim/vimrc.vim'
 execute 'source ~/.vim/keymaps.vim'
