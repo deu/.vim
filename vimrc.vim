@@ -1,6 +1,7 @@
 " === General settings
 set backspace=indent,eol,start  " Backspace behaves as it should.
-set number                      " Line numbers.
+set number                      " Line numbers (absolute).
+set relativenumber              " Line numbers (relative).
 set cursorline                  " Highlight the current line.
 set colorcolumn=80              " Line length marker.
 set laststatus=2                " Always show the statusline.
@@ -10,7 +11,6 @@ set hidden                      " Don't unload abandoned buffers.
 set wildmenu                    " Turn on the wildmenu...
 set wildmode=longest:full       " ...and make it behave like BASH.
 set completeopt-=preview        " Disable the autocompletion's preview window.
-set noswapfile                  " Disable the creation of .swp files.
 syntax on                       " Syntax hightlighting.
 filetype plugin indent on       " Filetype plugins.
 " Enable mouse support:
@@ -19,6 +19,10 @@ set ttymouse=xterm2
 " Put the viminfo file into the store directory:
 let &viminfo .= expand(',n' . g:dotvim . '/store/viminfo')
 
+" === Relative line numbering
+autocmd InsertLeave,WinEnter,FocusGained * :setlocal number relativenumber
+autocmd InsertEnter,WinLeave,FocusLost   * :setlocal number norelativenumber
+
 " === Indentation
 set expandtab      " <TAB> inserts whitespaces.
 "set noexpandtab    " <TAB> inserts tabs.
@@ -26,6 +30,7 @@ set tabstop=4      " How long an actual tab is.
 set shiftwidth=4   " Length of every indentation step.
 set softtabstop=4  " Number of whitespaces VIM sees as a tab.
 set autoindent     " Automatic indentation (duh).
+set breakindent    " Keep indentation on wrapped lines.
 " Use actual tabs when editing certain filetypes:
 autocmd FileType go,html,make setlocal noexpandtab
 " Remove trailing whitespaces when saving certain filetypes:
@@ -35,6 +40,12 @@ autocmd FileType go,html,make setlocal noexpandtab
 set hlsearch    " Highlight search results.
 set ignorecase  " Ignore case...
 set smartcase   " ...but don't do that when the search starts in upper case.
+
+" === Swap files
+let &directory = expand(g:dotvim . '/store/swap//')
+if !isdirectory(&directory)
+    call mkdir(&directory, "", 0700)
+endif
 
 " === Persistent undo
 if has('persistent_undo')
