@@ -11,6 +11,7 @@ set hidden                      " Don't unload abandoned buffers.
 set wildmenu                    " Turn on the wildmenu...
 set wildmode=longest:full       " ...and make it behave like BASH.
 set completeopt-=preview        " Disable the autocompletion's preview window.
+set noswapfile                  " Disable the creation of .swp files.
 syntax on                       " Syntax hightlighting.
 filetype plugin indent on       " Filetype plugins.
 " Enable mouse support:
@@ -40,12 +41,6 @@ autocmd FileType go,html,make setlocal noexpandtab
 set hlsearch    " Highlight search results.
 set ignorecase  " Ignore case...
 set smartcase   " ...but don't do that when the search starts in upper case.
-
-" === Swap files
-let &directory = expand(g:dotvim . '/store/swap//')
-if !isdirectory(&directory)
-    call mkdir(&directory, "", 0700)
-endif
 
 " === Persistent undo
 if has('persistent_undo')
