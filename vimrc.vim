@@ -11,6 +11,7 @@ set hidden                      " Don't unload abandoned buffers.
 set wildmenu                    " Turn on the wildmenu...
 set wildmode=longest:full       " ...and make it behave like BASH.
 set completeopt-=preview        " Disable the autocompletion's preview window.
+set pumheight=10                " Number of items in the autocomplete menu.
 set noswapfile                  " Disable the creation of .swp files.
 syntax on                       " Syntax hightlighting.
 filetype plugin indent on       " Filetype plugins.

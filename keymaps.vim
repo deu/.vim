@@ -1,5 +1,8 @@
 let mapleader = '\' " The default, but let's be sure.
 
+" QQ quits all:
+nnoremap QQ :qa<CR>
+
 " Move around within wrapped lines but keep the original Nj/k behaviour:
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'

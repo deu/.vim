@@ -45,7 +45,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
-[submodule "bundle/vim-plugin-autosess"]
-	path = bundle/vim-plugin-autosess
-	url = https://github.com/powerman/vim-plugin-autosess
-	ignore = untracked
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
